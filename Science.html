@@ -59,10 +59,12 @@
             padding: 40px;
             max-width: 1200px;
             margin: 0 auto;
+            text-align: center; /* 뉴스 항목들을 중앙 정렬 */
         }
         .news-item {
             display: flex;
             align-items: center;
+            justify-content: center; /* 내부 요소들을 중앙으로 정렬 */
             margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 1px solid #ddd;
@@ -75,6 +77,7 @@
         }
         .news-item .news-content {
             flex-grow: 1;
+            max-width: 800px; /* 뉴스 콘텐츠의 최대 너비를 설정하여 중앙 정렬 효과 */
         }
         .news-item h3 {
             font-size: 24px;
@@ -108,19 +111,15 @@
         <img src="science_cover.jpg" alt="Science Image">
     </div>
 
-    <div class="news-item">
-        <img src="tomato_crispr.jpg" alt="CRISPR Tomato">
-        <div class="news-content">
-            <h3 href="Science_article/20241118/science_article1_20241118.html" style="color: #0071e3; text-decoration: none;">
-                CRISPR builds a big tomato that’s actually sweet</h3>
-            <p class="highlighted-text" style="color: #E34234; font-weight: bold;">
-                두 개의 설탕 생산을 조절하는 유전자를 삭제하여 더 맛있는 토마토를 만들었습니다. 유전공학이 농업을 어떻게 변화시키고 있는지 알아보세요.
-            </p>
-            <p style="color: #0071e3;">
-                Deleting just two genes that control sugar production makes a more succulent fruit. Discover how genetic engineering is transforming agriculture.
-            </p>
+    <div class="news-container">
+        <div class="news-item">
+            <img src="tomato_crispr.jpg" alt="CRISPR Tomato">
+            <div class="news-content">
+                <h3 style="color: #0071e3;">CRISPR builds a big tomato that’s actually sweet</h3>
+                <p class="highlighted-text" style="color: #E34234; font-weight: bold;">두 개의 설탕 생산을 조절하는 유전자를 삭제하여 더 맛있는 토마토를 만들었습니다. 유전공학이 농업을 어떻게 변화시키고 있는지 알아보세요.</p>
+                <p style="color: #0071e3;">Deleting just two genes that control sugar production makes a more succulent fruit. Discover how genetic engineering is transforming agriculture.</p>
+            </div>
         </div>
-    </div>
         <div class="news-item">
             <img src="clean_energy.jpg" alt="Clean Energy">
             <div class="news-content">
