@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             background-color: #ffffff;
             color: #333;
             margin: 0;
+            line-height: 1.6;
         }
         .navbar {
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #f8f8f8;
-            padding: 10px 20px;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
         }
         .navbar a {
             margin: 0 15px;
@@ -30,65 +27,69 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 18px;
-            padding: 10px;
         }
         .navbar a:hover {
             color: #0071e3;
-            background-color: #f0f0f0;
-            border-radius: 5px;
+        }
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
         }
         .hero-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 50px;
-            background-color: #0071e3;
-            color: white;
-            max-width: 1200px;
-            margin: 0 auto;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
         }
-        .hero-section .hero-text {
-            max-width: 60%;
+        .hero-title {
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: bold;
         }
-        .hero-section img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
+        .hero-description {
+            font-size: 1.2rem;
+            color: #555;
         }
-        .news-container {
-            padding: 40px;
-            max-width: 900px; /* 컨테이너의 너비를 조정 */
-            margin: 0 auto; /* 페이지 중앙에 위치시키되 좌우 여백 조정 */
+        .news-section h2 {
+            font-size: 1.8rem;
+            color: #333;
+            border-bottom: 2px solid #0071e3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
         .news-item {
             display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
+            justify-content: space-between;
+            padding: 20px 0;
             border-bottom: 1px solid #ddd;
         }
-        .news-item img {
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-content {
+            flex-grow: 1;
+        }
+        .news-title {
+            font-size: 1.5rem;
+            color: #0071e3;
+            margin: 0 0 10px 0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .news-summary {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .news-meta {
+            font-size: 0.9rem;
+            color: #999;
+        }
+        .news-image {
             width: 150px;
             height: auto;
-            margin-right: 20px;
+            margin-left: 20px;
             border-radius: 5px;
-        }
-        .news-item .news-content {
-            flex-grow: 1;
-            text-align: left; /* 텍스트를 왼쪽 정렬 */
-        }
-        .news-item h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #0071e3;
-        }
-        .news-item p {
-            font-size: 16px;
-            color: #555;
-        }
-        .highlighted-text {
-            color: #E34234; /* Vermilion color */
-            font-weight: bold;
         }
     </style>
 </head>
@@ -101,37 +102,37 @@
         <a href="more.html">More</a>
     </div>
 
-    <div class="hero-section">
-        <div class="hero-text">
-            <h1>Science</h1>
-            <p>Explore the latest advancements and discoveries in science. Our research at YongDeok Lab aims to contribute to the development of knowledge across various fields, focusing on groundbreaking studies that push the boundaries of our understanding.</p>
+    <div class="content-wrapper">
+        <div class="hero-section">
+            <h1 class="hero-title">Science</h1>
+            <p class="hero-description">Explore the latest advancements and discoveries in science. Our research at YongDeok Lab aims to contribute to the development of knowledge across various fields, focusing on groundbreaking studies that push the boundaries of our understanding.</p>
         </div>
-        <img src="science_cover.jpg" alt="Science Image">
-    </div>
 
-    <div class="news-container">
-        <div class="news-item">
-            <img src="tomato_crispr.jpg" alt="CRISPR Tomato">
-            <div class="news-content">
-                <h3 style="color: #0071e3;">CRISPR builds a big tomato that’s actually sweet</h3>
-                <p class="highlighted-text" style="color: #E34234; font-weight: bold;">두 개의 설탕 생산을 조절하는 유전자를 삭제하여 더 맛있는 토마토를 만들었습니다. 유전공학이 농업을 어떻게 변화시키고 있는지 알아보세요.</p>
-                <p style="color: #0071e3;">Deleting just two genes that control sugar production makes a more succulent fruit. Discover how genetic engineering is transforming agriculture.</p>
+        <div class="news-section">
+            <h2>Features</h2>
+            <div class="news-item">
+                <div class="news-content">
+                    <a href="Science_article/science_article1_20241118.html" class="news-title">CRISPR builds a big tomato that’s actually sweet</a>
+                    <p class="news-summary">두 개의 설탕 생산을 조절하는 유전자를 삭제하여 더 맛있는 토마토를 만들었습니다. 유전공학이 농업을 어떻게 변화시키고 있는지 알아보세요.</p>
+                    <p class="news-meta">16 October 2024 | Nature</p>
+                </div>
+                <img src="tomato_crispr.jpg" alt="CRISPR Tomato" class="news-image">
             </div>
-        </div>
-        <div class="news-item">
-            <img src="clean_energy.jpg" alt="Clean Energy">
-            <div class="news-content">
-                <h3 style="color: #0071e3;">Geothermal power is vying to be a major player in the world’s clean-energy future</h3>
-                <p class="highlighted-text" style="color: #E34234; font-weight: bold;">재생 가능한 에너지에 대한 수요가 증가하면서 지열 발전이 유망한 옵션으로 부상하고 있습니다. 청정 에너지 기술의 최신 발전 내용을 알아보세요.</p>
-                <p style="color: #0071e3;">With increasing demand for renewable energy, geothermal power emerges as a viable option. Learn about the latest developments in clean energy technology.</p>
+            <div class="news-item">
+                <div class="news-content">
+                    <a href="#" class="news-title">Geothermal power is vying to be a major player in the world’s clean-energy future</a>
+                    <p class="news-summary">재생 가능한 에너지에 대한 수요가 증가하면서 지열 발전이 유망한 옵션으로 부상하고 있습니다. 청정 에너지 기술의 최신 발전 내용을 알아보세요.</p>
+                    <p class="news-meta">16 October 2024 | Nature</p>
+                </div>
+                <img src="clean_energy.jpg" alt="Clean Energy" class="news-image">
             </div>
-        </div>
-        <div class="news-item">
-            <img src="ai_review.jpg" alt="AI Review">
-            <div class="news-content">
-                <h3 style="color: #0071e3;">Can AI review the scientific literature – and figure out what it all means?</h3>
-                <p class="highlighted-text" style="color: #E34234; font-weight: bold;">인공지능은 연구자들에게 과학 논문의 방대한 양을 정리하는 데 있어 중요한 도구가 되고 있습니다. 연구에서 AI의 미래를 탐구해 보세요.</p>
-                <p style="color: #0071e3;">Artificial intelligence is becoming an invaluable tool for researchers, helping to sort through the overwhelming volume of scientific papers. Explore the future of AI in research.</p>
+            <div class="news-item">
+                <div class="news-content">
+                    <a href="#" class="news-title">Can AI review the scientific literature – and figure out what it all means?</a>
+                    <p class="news-summary">인공지능은 연구자들에게 과학 논문의 방대한 양을 정리하는 데 있어 중요한 도구가 되고 있습니다. 연구에서 AI의 미래를 탐구해 보세요.</p>
+                    <p class="news-meta">16 October 2024 | Nature</p>
+                </div>
+                <img src="ai_review.jpg" alt="AI Review" class="news-image">
             </div>
         </div>
     </div>
