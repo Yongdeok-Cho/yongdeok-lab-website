@@ -57,14 +57,12 @@
         }
         .news-container {
             padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center; /* 뉴스 항목들을 중앙 정렬 */
+            max-width: 900px; /* 컨테이너의 너비를 조정 */
+            margin: 0 auto; /* 페이지 중앙에 위치시키되 좌우 여백 조정 */
         }
         .news-item {
             display: flex;
             align-items: center;
-            justify-content: center; /* 내부 요소들을 중앙으로 정렬 */
             margin-bottom: 30px;
             padding-bottom: 20px;
             border-bottom: 1px solid #ddd;
@@ -77,7 +75,7 @@
         }
         .news-item .news-content {
             flex-grow: 1;
-            max-width: 800px; /* 뉴스 콘텐츠의 최대 너비를 설정하여 중앙 정렬 효과 */
+            text-align: left; /* 텍스트를 왼쪽 정렬 */
         }
         .news-item h3 {
             font-size: 24px;
